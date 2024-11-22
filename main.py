@@ -15,7 +15,7 @@ class Person:
 class Student(Person):
     def __init__(self, given_name, given_age, given_gender):
         super().__init__(given_name, given_age, given_gender)
-        self.student_id = "00000"
+        self.student_id = ""
         self.course = ""
         self.grades = []
 
@@ -33,4 +33,9 @@ class Student(Person):
         return avg_grade
     
     def get_student_summary(self):
-        print(f"Name: ")
+        print(f"Name: {self.name}, Student ID: {self.student_id}, Course: {self.course}, Grades: {self.grades} ")
+    
+    class Professor(Person):
+        def __init__(self,given_name, given_age, given_gender):
+            super().__init__(given_name, given_age, given_gender)
+            
